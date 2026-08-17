@@ -1,0 +1,175 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --PadraoFundo: radial-gradient(circle, transparent 20%, #FCFCFC 20%, #FCFCFC 80%, transparent 80%, transparent) 0% 0% / 80px 80px, radial-gradient(circle, transparent 20%, #FCFCFC 20%, #FCFCFC 80%, transparent 80%, transparent) 40px 40px / 80px 80px, linear-gradient(#E1F9FF 2px, transparent 2px) 0px -1px / 40px 40px, linear-gradient(90deg, #E1F9FF 2px, #FCFCFC 2px) -1px 0px / 40px 40px #FCFCFC;
+}
+
+/* Alinhar */
+
+.studant-id, .etiqueta, .pericias h3, .pericia-head, .defesa-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Items Profile */
+
+.nivel-etiqueta, .linhagem-etiqueta{
+ grid-column: span 1;
+}
+
+.nivel-etiqueta{
+    color: #f6f6f6;
+    background: #09afbe;
+}
+
+.player-etiqueta{
+    text-align: center;
+    cursor: text;
+}
+.player-etiqueta::placeholder{
+    text-align: center;
+    color: #09afbe6e;
+}
+
+.nivel-etiuqeta, .escola-etiuqeta, .player-etiuqeta{
+    position: relative;
+    z-index: 3;
+}
+.nivel-clube, .escola-linhagem, .player-classe{
+    position: relative;
+    z-index: 2;
+}
+.character-name{
+    position: relative;
+    z-index: 1;
+}
+
+/* Drops do Perfil */
+
+.nivel-lista{
+    top: 35px; left: 47px;
+    width: 80px;
+}
+
+.escola-lista{
+    top: 35px;  left: 137px;
+    width: 285px;
+}
+
+.clube-lista{
+    top: 69px; left: 47px;
+    width: 275px;
+}
+
+.linhagem-lista{
+    top: 69px; left: 332px;
+    width: 89px;
+}
+.classe-lista{
+    top: 69px; left: 431px;
+    width: 105px;
+}
+
+.lista::-webkit-scrollbar {
+  display: none;
+}
+.lista{
+  scrollbar-width: none;
+}
+
+.arma-input{
+    background: #09afbe;
+    color: #f6f6f6;
+    grid-column: span 4;
+}
+
+.arma-input::placeholder{
+    color: #f6f6f69a;
+}
+.critico-input{
+    grid-column: span 2;
+}
+.dano-input{
+    grid-column: span 2;
+}
+.rajada-input{
+    grid-column: span 3;
+}
+.cargas-input{
+    grid-column: span 2;
+}
+.alcance-input{
+    grid-column: span 3;
+}
+.propriedade-input{
+    grid-column: span 5;
+}
+.empunhadura-input{
+    grid-column: span 3;
+}
+.btn-next{
+    grid-column: 8;
+}
+.btn-prev{
+    grid-column: 7;
+}
+.btn-plus{
+    grid-row: 4; grid-column: 1;
+}
+.colete-input{
+    background: #09afbe;
+    color: #f6f6f6;
+    grid-column: span 5;
+}
+.colete-input::placeholder{
+    color: #f6f6f69a;
+}
+.defesaColete-input{
+    grid-column: span 2;
+}
+.rd-input{
+    grid-column: span 1;
+}
+.penalidade-input{
+    grid-column: span 2;
+}
+.requisito-input{
+    grid-column: span 6;
+}
+.propriedade-input.coletes-propiedadas{
+    grid-column: span 8;
+}
+.iventario-titulo{
+    margin-bottom: 20px;
+}
+.iventario-input{
+    grid-column: span 3;
+}
+.iventario-input-count{
+    grid-column: span 1;
+}
+
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+input{
+    background: transparent;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: none;
+    -moz-appearance: textfield;
+}

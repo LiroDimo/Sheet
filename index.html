@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_cacheOverride=1786050208731" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Ficha Blue Archive</title>
+</head>
+<body>
+    <div class="container">
+        <main class="main-container">
+            <header class="character-profile menu-container">
+                <div id="character-photo" class="character-photo"  title="Da pra troca a foto cavalo!">
+                    <div id="studant-id" class="studant-id">
+                    </div>
+                    <img id="person-photo" src="https://static.wikitide.net/bluearchivewiki/thumb/9/93/Hatsune_Miku.png/399px-Hatsune_Miku.png" alt="photo">
+                </div>
+                <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                <section class="character-info">
+                    <button id="botao-nivel" class="nivel-etiqueta etiqueta"></button>
+                    <button id="botao-escola" class="escola-etiqueta etiqueta"></button>
+                    <input id="player-name" class="player-etiqueta etiqueta" type="text" placeholder="JOGADOR">
+                    <button id="botao-clube" class="clube-etiqueta etiqueta"></button>
+                    <button id="botao-linhagem" class="linhagem-etiqueta etiqueta"></button>
+                    <button id="botao-classe" class="classe-etiqueta etiqueta"></button>
+                    <h1 id="character-name" class="character-name" contenteditable="true" spellcheck="false"></h1>
+                    <div id="lista-nivel" class="nivel-lista lista">
+                        <ul>
+                            <li>NÍVEL 01</li>
+                            <li>NÍVEL 02</li>
+                            <li>NÍVEL 03</li>
+                            <li>NÍVEL 04</li>
+                            <li>NÍVEL 05</li>
+                            <li>NÍVEL 06</li>
+                            <li>NÍVEL 07</li>
+                            <li>NÍVEL 08</li>
+                            <li>NÍVEL 09</li>
+                            <li>NÍVEL 10</li>
+                            <li>NÍVEL 11</li>
+                            <li>NÍVEL 12</li>
+                            <li>NÍVEL 13</li>
+                            <li>NÍVEL 14</li>
+                            <li>NÍVEL 15</li>
+                            <li>NÍVEL 16</li>
+                            <li>NÍVEL 17</li>
+                            <li>NÍVEL 18</li>
+                            <li>NÍVEL 19</li>
+                            <li>NÍVEL 20</li>
+                        </ul>
+                    </div>
+                    <div id="lista-escola"  class="escola-lista lista">
+                        <ul>
+                            <li>ABYDOS HIGH SCHOOL</li>
+                            <li>ARIUS BRANCH SCHOOL</li>
+                            <li>GEHENNA ACADEMY</li>
+                            <li>GENERAL STUDENT COUNCIL</li>
+                            <li>HIGHLANDER RAILROAD ACADEMY</li>
+                            <li>HYAKKIYAKO ALLIANCE ACADEMY</li>
+                            <li>MILLENNIUM SCIENCE SCHOOL</li>
+                            <li>RED WINTER FEDERAL ACADEMY</li>
+                            <li>SHANHAIJING SENIOR HIGH SCHOOL</li>
+                            <li>SRT SPECIAL ACADEMY</li>
+                            <li>TRINITY GENERAL SCHOOL</li>
+                            <li>VALKYRIE POLICE ACADEMY</li>
+                        </ul>
+                    </div>
+                    <div id="lista-clube"  class="clube-lista lista">
+                        <ul>
+                            <li>CLUBE DE ENGENHARIA</li>
+                            <li>CLUBE DE HACKING</li>
+                            <li>CLUBE DE JORNALISMO</li>
+                            <li>CLUBE DE KARATÊ</li>
+                            <li>CLUBE DE KENDO</li>
+                            <li>CLUBE DE ROBÓTICA</li>
+                            <li>CLUBE DE SOBREVIVÊNCIA</li>
+                            <li>CLUBE DE TEATRO</li>
+                            <li>CLUBE DE TIRO ESPORTIVO</li>
+                            <li>CONSELHO ESTUDANTIL</li>
+                            <li>ESQUADRÃO DE PRIMEIROS SOCORROS</li>
+                            <li>SEM CLUBE</li>
+                        </ul>
+                    </div>
+                    <div id="lista-linhagem"  class="linhagem-lista lista">
+                        <ul>
+                            <li>ANDROIDE</li>
+                            <li>ANJO</li>
+                            <li>BESTA</li>
+                            <li>DEMÔNIO</li>
+                            <li>ELFO</li>
+                            <li>HUMANO</li>
+                        </ul>
+                    </div>
+                    <div id="lista-classe"  class="classe-lista lista">
+                        <ul>
+                            <li>ASSALTO</li>
+                            <li>ENGENHEIRO</li>
+                            <li>MÉDICO</li>
+                            <li>SNIPER</li>
+                            <li>TÁTICO</li>
+                            <li>VANGUARDA</li>
+                        </ul>
+                    </div>
+                </section>
+            </header>
+            <section class="atributos menu-container">
+                <h2 class="menu-title atributos-titulo"><span class="fas fa-poll"></span> Atributos</h2>
+                <div class="atributos-card">
+                    <label for="for-atributo" class="nome-atributo">FORÇA</label>
+                    <output id="for-modificador" >0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="for-atributo">
+                </div>
+                <div class="atributos-card">
+                    <label for="des-atributo" class="nome-atributo">DESTREZA</label>
+                    <output id="des-modificador">0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="des-atributo">
+                </div>
+                <div class="atributos-card">
+                    <label for="cos-atributo" class="nome-atributo">CONSTITUIÇÃO</label>
+                    <output id="cos-modificador">0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="cos-atributo">
+                </div>
+                <div class="atributos-card">
+                    <label for="int-atributo" class="nome-atributo">INTELIGÊNCIA</label>
+                    <output id="int-modificador">0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="int-atributo">
+                </div>
+                <div class="atributos-card">
+                    <label for="sab-atributo" class="nome-atributo">SABEDORIA</label>
+                    <output id="sab-modificador">0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="sab-atributo">
+                </div>
+                <div class="atributos-card">
+                    <label for="car-atributo" class="nome-atributo">CARISMA</label>
+                    <output id="car-modificador">0</output>
+                    <input type="number" value="10" class="input-number atributos-input" id="car-atributo">
+                </div>
+            </section>
+            <section class="pericias menu-container">
+                <h2 class="menu-title pericias-titulo"><span class="fas fa-book"></span> Peícias</h2>
+                <div class="pericia-head">
+                    <span>PERÍCIA</span>
+                    <span>ATRIBUTO</span>
+                    <span>DOMINÍO</span>
+                    <span>BÔNUS</span>
+                    <span>TOTAL</span>
+                </div>
+                <h3><span class="fas fa-leaf"></span>PERÍCIAS NATURAIS</h3>
+                <div data-ir="pericia-acrobacia" class="pericia-card">
+                    <label for="acrobacia-dominio">ACROBACIA</label>
+                    <span class="pericia-atributo">DES</span>
+                    <input type="number" value="0" name="acrobacia-dominio" id="acrobacia-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="acrobacia-bonus" id="acrobacia-bonus" class="bonus-input input-number pericia-input">
+                    <output id="acrobacia-modificador">0</output>
+                </div>
+                <div data-ir="pericia-atletismo" class="pericia-card">
+                    <label for="atletismo-dominio">ATLETISMO</label>
+                    <span class="pericia-atributo">FOR</span>
+                    <input type="number" value="0" name="atletismo-dominio" id="atletismo-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="atletismo-bonus" id="atletismo-bonus" class="bonus-input input-number pericia-input">
+                    <output id="atletismo-modificador">0</output>
+                </div>
+                <div data-ir="pericia-atuacao" class="pericia-card">
+                    <label for="atuacao-dominio">ATUAÇÃO</label>
+                    <span class="pericia-atributo">CAR</span>
+                    <input type="number" value="0" name="atuacao-dominio" id="atuacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="atuacao-bonus" id="atuacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="atuacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-enganacao" class="pericia-card">
+                    <label for="enganacao-dominio">ENGANAÇÃO</label>
+                    <span class="pericia-atributo">CAR</span>
+                    <input type="number" value="0" name="enganacao-dominio" id="enganacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="enganacao-bonus" id="enganacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="enganacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-fortitude" class="pericia-card">
+                    <label for="fortitude-dominio">FORTITUDE</label>
+                    <span class="pericia-atributo">CON</span>
+                    <input type="number" value="0" name="fortitude-dominio" id="fortitude-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="fortitude-bonus" id="fortitude-bonus" class="bonus-input input-number pericia-input">
+                    <output id="fortitude-modificador">0</output>
+                </div>
+                <div data-ir="pericia-furtividade" class="pericia-card">
+                    <label for="furtividade-dominio">FURTIVIDADE</label>
+                    <span class="pericia-atributo">DES</span>
+                    <input type="number" value="0" name="furtividade-dominio" id="furtividade-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="furtividade-bonus" id="furtividade-bonus" class="bonus-input input-number pericia-input">
+                    <output id="furtividade-modificador">0</output>
+                </div>
+                <div data-ir="pericia-historia" class="pericia-card">
+                    <label for="historia-dominio">HISTÓRIA</label>
+                    <span class="pericia-atributo">INT</span>
+                    <input type="number" value="0" name="historia-dominio" id="historia-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="historia-bonus" id="historia-bonus" class="bonus-input input-number pericia-input">
+                    <output id="historia-modificador">0</output>
+                </div>
+                <div data-ir="pericia-intimidacao" class="pericia-card">
+                    <label for="intimidacao-dominio">INTIMIDAÇÃO</label>
+                    <span class="pericia-atributo">CAR</span>
+                    <input type="number" value="0" name="intimidacao-dominio" id="intimidacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="intimidacao-bonus" id="intimidacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="intimidacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-intuicao" class="pericia-card">
+                    <label for="intuicao-dominio">INTUIÇÃO</label>
+                    <span class="pericia-atributo">SAB</span>
+                    <input type="number" value="0" name="intuicao-dominio" id="intuicao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="intuicao-bonus" id="intuicao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="intuicao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-investigacao" class="pericia-card">
+                    <label for="investigacao-dominio">INVESTIGAÇÃO</label>
+                    <span class="pericia-atributo">INT</span>
+                    <input type="number" value="0" name="investigacao-dominio" id="investigacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="investigacao-bonus" id="investigacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="investigacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-mente" class="pericia-card">
+                    <label for="mente-dominio">MENTE</label>
+                    <span class="pericia-atributo">SAB</span>
+                    <input type="number" value="0" name="mente-dominio" id="mente-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="mente-bonus" id="mente-bonus" class="bonus-input input-number pericia-input">
+                    <output id="mente-modificador">0</output>
+                </div>
+                <div data-ir="pericia-percepcao" class="pericia-card">
+                    <label for="percepcao-dominio">PERCEPÇÃO</label>
+                    <span class="pericia-atributo">SAB</span>
+                    <input type="number" value="0" name="percepcao-dominio" id="percepcao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="percepcao-bonus" id="percepcao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="percepcao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-persuasao" class="pericia-card">
+                    <label for="persuasao-dominio">PERSUASÃO</label>
+                    <span class="pericia-atributo">CAR</span>
+                    <input type="number" value="0" name="persuasao-dominio" id="persuasao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="persuasao-bonus" id="persuasao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="persuasao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-prestidigitacao" class="pericia-card">
+                    <label for="prestidigitacao-dominio">PRESTIDIGITAÇÃO</label>
+                    <span class="pericia-atributo">DES</span>
+                    <input type="number" value="0" name="prestidigitacao-dominio" id="prestidigitacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="prestidigitacao-bonus" id="prestidigitacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="prestidigitacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-reflexos" class="pericia-card">
+                    <label for="reflexos-dominio">REFLEXOS</label>
+                    <span class="pericia-atributo">DES</span>
+                    <input type="number" value="0" name="reflexos-dominio" id="reflexos-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="reflexos-bonus" id="reflexos-bonus" class="bonus-input input-number pericia-input">
+                    <output id="reflexos-modificador">0</output>
+                </div>
+                <div data-ir="pericia-sobrevivencia" class="pericia-card">
+                    <label for="sobrevivencia-dominio">SOBREVIVÊNCIA</label>
+                    <span class="pericia-atributo">SAB</span>
+                    <input type="number" value="0" name="sobrevivencia-dominio" id="sobrevivencia-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="sobrevivencia-bonus" id="sobrevivencia-bonus" class="bonus-input input-number pericia-input">
+                    <output id="sobrevivencia-modificador">0</output>
+                </div>
+                <h3><span class="fas fa-satellite"></span>PERÍCIAS TREINADAS</h3>
+                <div data-ir="pericia-artilharia" class="pericia-card">
+                    <label for="artilharia-dominio">ARTILHARIA</label>
+                    <span class="pericia-atributo">INT</span>
+                    <input type="number" value="0" name="artilharia-dominio" id="artilharia-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="artilharia-bonus" id="artilharia-bonus" class="bonus-input input-number pericia-input">
+                    <output id="artilharia-modificador">0</output>
+                </div>
+                <div data-ir="pericia-fabricacao" class="pericia-card">
+                    <label for="fabricacao-dominio">FABRICAÇÃO</label>
+                    <span class="pericia-atributo">INT</span>
+                    <input type="number" value="0" name="fabricacao-dominio" id="fabricacao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="fabricacao-bonus" id="fabricacao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="fabricacao-modificador">0</output>
+                </div>
+                <div data-ir="pericia-medicina" class="pericia-card">
+                    <label for="medicina-dominio">MEDICINA</label>
+                    <span class="pericia-atributo">SAB</span>
+                    <input type="number" value="0" name="medicina-dominio" id="medicina-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="medicina-bonus" id="medicina-bonus" class="bonus-input input-number pericia-input">
+                    <output id="medicina-modificador">0</output>
+                </div>
+                <div data-ir="pericia-pilotagem" class="pericia-card">
+                    <label for="pilotagem-dominio">PILOTAGEM</label>
+                    <span class="pericia-atributo">DES</span>
+                    <input type="number" value="0" name="pilotagem-dominio" id="pilotagem-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="pilotagem-bonus" id="pilotagem-bonus" class="bonus-input input-number pericia-input">
+                    <output id="pilotagem-modificador">0</output>
+                </div>
+                <div data-ir="pericia-politica" class="pericia-card">
+                    <label for="politica-dominio">POLÍTICA</label>
+                    <span class="pericia-atributo">CAR</span>
+                    <input type="number" value="0" name="politica-dominio" id="politica-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="politica-bonus" id="politica-bonus" class="bonus-input input-number pericia-input">
+                    <output id="politica-modificador">0</output>
+                </div>
+                <div data-ir="pericia-tecnologia" class="pericia-card">
+                    <label for="tecnologia-dominio">TECNOLOGIA</label>
+                    <span class="pericia-atributo">INT</span>
+                    <input type="number" value="0" name="tecnologia-dominio" id="tecnologia-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="tecnologia-bonus" id="tecnologia-bonus" class="bonus-input input-number pericia-input">
+                    <output id="tecnologia-modificador">0</output>
+                </div>
+                <h3><span class="fas fa-award"></span>PERÍCIAS DE COMBATE</h3>
+                <div data-ir="pericia-armas-leves" class="pericia-card">
+                    <label for="armas-leves-dominio">ARMAS LEVES</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="armas-leves-dominio" id="armas-leves-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="armas-leves-bonus" id="armas-leves-bonus" class="bonus-input input-number pericia-input">
+                    <output id="armas-leves-modificador">0</output>
+                </div>
+                <div data-ir="pericia-corpo-a-corpo" class="pericia-card">
+                    <label for="corpo-a-corpo-dominio">CORPO A CORPO</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="corpo-a-corpo-dominio" id="corpo-a-corpo-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="corpo-a-corpo-bonus" id="corpo-a-corpo-bonus" class="bonus-input input-number pericia-input">
+                    <output id="corpo-a-corpo-modificador">0</output>
+                </div>
+                <div data-ir="pericia-espingardas" class="pericia-card">
+                    <label for="espingardas-dominio">ESPINGARDAS</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="espingardas-dominio" id="espingardas-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="espingardas-bonus" id="espingardas-bonus" class="bonus-input input-number pericia-input">
+                    <output id="espingardas-modificador">0</output>
+                </div>
+                <div data-ir="pericia-esquiva" class="pericia-card">
+                    <label for="esquiva-dominio">ESQUIVA</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="esquiva-dominio" id="esquiva-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="esquiva-bonus" id="esquiva-bonus" class="bonus-input input-number pericia-input">
+                    <output id="esquiva-modificador">0</output>
+                </div>
+                <div data-ir="pericia-fuzil-de-assalto" class="pericia-card">
+                    <label for="fuzil-de-assalto-dominio">FUZIL DE ASSALTO</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="fuzil-de-assalto-dominio" id="fuzil-de-assalto-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="fuzil-de-assalto-bonus" id="fuzil-de-assalto-bonus" class="bonus-input input-number pericia-input">
+                    <output id="fuzil-de-assalto-modificador">0</output>
+                </div>
+                <div data-ir="pericia-fuzil-de-precisao" class="pericia-card">
+                    <label for="fuzil-de-precisao-dominio">FUZIL DE PRECISÃO</label>
+                    <span class="pericia-atributo">-</span>
+                    <input type="number" value="0" name="fuzil-de-precisao-dominio" id="fuzil-de-precisao-dominio" class="dominio-input input-number pericia-input">
+                    <input type="number" value="0" name="fuzil-de-precisao-bonus" id="fuzil-de-precisao-bonus" class="bonus-input input-number pericia-input">
+                    <output id="fuzil-de-precisao-modificador">0</output>
+                </div>
+            </section>
+            <section class="status menu-container">
+                <h2 class="menu-title status-titulo"><span class="fas fa-heartbeat"></span> Status</h2>
+                <h3><span class="fas fa-heart"></span> Health Points</h3>
+                <div class="barra-status life">
+                    <input type="number" value="10" class="input-number status-input" id="life-input-now">
+                    <span>/</span>
+                    <input type="number" value="10" class="input-number status-input" id="life-input-total">
+                </div>
+                <h3><span class="fas fa-bolt"></span> Light Points</h3>
+                <div class="barra-status light">
+                    <input type="number" value="3" class="input-number status-input" id="ligth-input-now">
+                    <span>/</span>
+                    <input type="number" value="3" class="input-number status-input" id="ligth-input-total">
+                </div>
+            </section>
+            <section class="defesa-temporaria menu-container">
+                <h2 class="menu-title defesa-titulo"><span class="fas fa-shield-alt"></span> Defesa e Vida Temporária</h2>
+                <div class="defesa-card defesa">
+                    <h3>DEFESA</h3>
+                    <input type="number" value="9" class="input-number defesa-input" id="defesa-input">
+                </div>
+                <div class="defesa-card vida">
+                    <h3>VIDA TEMPORARIA</h3>
+                    <input type="number" value="0" class="input-number defesa-input" id="vida-temporaria-input">
+                </div>
+            </section>
+            <section class="armas menu-container">
+                <h2 class="menu-title armas-titulo">
+                    <span class="fas fa-crosshairs"></span> Armas 
+                    <span class="pagina-info" id="pagina-info"></span>
+                </h2>
+                <div class="arma-container equipamento-container">
+                    <input type="text" class="arma-input etiqueta" placeholder="Arma" id="input-arma">
+                    <input type="text" class="critico-input etiqueta" placeholder="Crítico" id="input-critico">
+                    <input type="text" class="dano-input etiqueta" placeholder="Dano" id="input-dano">
+                    <input type="text" class="rajada-input etiqueta" placeholder="Rajada" id="input-rajada">
+                    <input type="text" class="cargas-input etiqueta" placeholder="Cargas" id="input-cargas">
+                    <input type="text" class="alcance-input etiqueta" placeholder="Alcance" id="input-alcance">
+                    <input type="text" class="empunhadura-input etiqueta" placeholder="Empunhadura" id="input-empunhadura">
+                    <input type="text" class="propriedade-input etiqueta" placeholder="Propriedade" id="input-propriedade">
+                    <button class="equipamento-btn btn-plus" id="btn-plus" title="Adicionar nova arma"><span class="fas fa-plus"></span></button>
+                    <button class="equipamento-btn btn-less" id="btn-less" title="Apagar arma atual"><span class="fas fa-trash"></span></button>
+                    <button class="equipamento-btn btn-prev" id="btn-prev" title="Página anterior"><span class="fas fa-chevron-left"></span></button>
+                    <button class="equipamento-btn btn-next" id="btn-next" title="Próxima página"><span class="fas fa-chevron-right"></span></button>
+                </div>
+            </section>
+            <section class="coletes menu-container">
+                <h2 class="menu-title coletes-titulo">
+                    <span class="fas fa-shield-alt"></span> Colete
+                    <span class="pagina-info" id="pagina-info-colete"></span>
+                </h2>
+                <div class="coletes-container equipamento-container">
+                    <input type="text" class="colete-input etiqueta" placeholder="Colete ou escudo" id="input-colete">
+                    <input type="number" class="defesaColete-input etiqueta" placeholder="Defesa" id="input-defesa-colete">
+                    <input type="text" class="rd-input etiqueta" placeholder="RD" id="input-rd-colete">
+                    <input type="number" class="penalidade-input etiqueta" placeholder="Penalidade" id="input-penalidade-colete">
+                    <input type="text" class="requisito-input etiqueta" placeholder="Requisito" id="input-requisito-colete">
+                    <input type="text" class="propriedade-input coletes-propiedadas etiqueta" placeholder="Propriedade" id="input-propriedade-colete">
+                    <button class="equipamento-btn btn-plus" id="btn-plus-colete" title="Adicionar novo colete"><span class="fas fa-plus"></span></button>
+                    <button class="equipamento-btn btn-less" id="btn-less-colete" title="Apagar colete atual"><span class="fas fa-trash"></span></button>
+                    <button class="equipamento-btn btn-prev" id="btn-prev-colete" title="Página anterior"><span class="fas fa-chevron-left"></span></button>
+                    <button class="equipamento-btn btn-next" id="btn-next-colete" title="Próxima página"><span class="fas fa-chevron-right"></span></button>               
+                </div>
+            </section>
+            <section class="iventario menu-container">
+                <h2 class="menu-title iventario-titulo">
+                    <span class="fas fa-box"></span> Inventário
+                    <span class="pagina-info" id="pagina-info-inventario"></span>
+                </h2>
+                <div class="coletes-container equipamento-container">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-i">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-i">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-ii">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-ii">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-iii">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-iii">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-iv">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-iv">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-v">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-v">
+                    <input type="text" class="iventario-input etiqueta" placeholder="Item" id="iventario-input-vi">
+                    <input type="number" class="iventario-input-count etiqueta" value="0" id="iventario-input-count-vi">
+                    <button class="equipamento-btn btn-plus" id="btn-plus-iventario" title="Adicionar nova pagina de itens"><span class="fas fa-plus"></span></button>
+                    <button class="equipamento-btn btn-less" id="btn-less-iventario" title="Apagar pagina atual"><span class="fas fa-trash"></span></button>
+                    <button class="equipamento-btn btn-prev" id="btn-prev-iventario" title="Página anterior"><span class="fas fa-chevron-left"></span></button>
+                    <button class="equipamento-btn btn-next" id="btn-next-iventario" title="Próxima página"><span class="fas fa-chevron-right"></span></button>               
+                </div>
+            </section>
+            <section class="habilidades menu-container">
+                <h2 class="menu-title habilidades-title">
+                    <span class="fas fa-star"></span> Habilidades
+                    <span class="pagina-info" id="pagina-info-habilidades"></span>
+                </h2>
+                <div class="habilidades-container">
+                    <div class="habilidade-show menu-container" id="modal-habilidade">
+                        <h4 class="habilidade-show-desc">Habilidade:</h4>
+                        <input type="text" class="habilidade-show-input-title habilidade-show-text" placeholder="Assalto Meteórico" id="habilidade-show-input">
+                        <button class="habilidade-show-desc" id="habilidade-show-origem">Origem:</button>
+                        <output class="habilidade-show-text habilidade-output" id="habilidade-show-origem-output"></output>
+                        <h4 class="habilidade-show-desc">Custo:</h4>
+                        <input type="text" class="habilidade-show-input-custo habilidade-show-text" placeholder="3 PH" id="habilidade-show-custo">
+                        <h4 class="habilidade-show-desc">Ação:</h4>
+                        <input type="text" class="habilidade-show-input-acao habilidade-show-text" placeholder="Ação de Movimento" id="habilidade-show-acao">
+                        <h4 class="habilidade-show-desc">Duração:</h4>
+                        <input type="text" class="habilidade-show-input-duracao habilidade-show-text" placeholder="Instantâneo" id="habilidade-show-duracao">
+                        <h4 class="habilidade-show-desc">Limite:</h4>
+                        <input type="text" class="habilidade-show-input-limite habilidade-show-text" placeholder="1 Vez por Semana" id="habilidade-show-limite">
+                        <h4 class="habilidade-show-desc">Área:</h4>
+                        <input type="text" class="habilidade-show-input-area habilidade-show-text" placeholder="3m de Raio" id="habilidade-show-area">
+                        <h4 class="habilidade-show-desc">Resistencia:</h4>
+                        <input type="text" class="habilidade-show-input-resistencia habilidade-show-text" placeholder="Acrobacia Anula" id="habilidade-show-resistencia">
+                        <h4 class="habilidade-show-desc">Descrição</h4>
+                        <textarea class="habilidade-show-input-descricao habilidade-show-text" placeholder="Sua descrição aqui..." id="habilidade-show-descricao"></textarea>
+                        <div id="lista-habilidasdes-origem" class="lista-habilidas-origem">
+                            <ul>
+                                <li>Linhagem</li>
+                                <li>Escola</li>
+                                <li>Clube</li>
+                                <li>Classe</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="habilidade-show-buttons">
+                        <button id="btn-deletar-habilidade" class="btn-less-habilidade-show btn-less-show"><span class="fas fa-trash"></span></button>
+                        <button id="btn-fechar-modal" class="btn-close-habilidade-show btn-less-clos"><span class="fas fa-plus"></span></button>
+                    </div>
+                    <button class="habilidade-btn btn-plus" id="btn-plus-habilidade" title="Adicionar nova pagina de habilidades"><span class="fas fa-plus"></span></button>
+                    <button class="habilidade-btn btn-prev" id="btn-prev-habilidade" title="Página anterior"><span class="fas fa-chevron-left"></span></button>
+                    <button class="habilidade-btn btn-next" id="btn-next-habilidade" title="Próxima página"><span class="fas fa-chevron-right"></span></button>
+                </div> 
+            </section>
+            <section class="agenda menu-container">
+                <h2 class="menu-title agenda-tile"><span class="fas fa-book"></span> Agenda</h2>
+                <textarea class="agenda-text"></textarea>
+            </section>
+        </main>
+        <div class="background">
+            <div class="background-shape-i"></div>
+            <div class="background-shape-ii"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
