@@ -356,7 +356,7 @@
 
 .equipamento-container{
     display: grid;
-    grid-template-columns: repeat(8, 45px);
+    grid-template-columns: repeat(8, 40px);
     grid-template-rows: repeat(3, 25px) 50px;
     gap: 10px;
 }
