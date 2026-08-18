@@ -358,6 +358,7 @@
     display: grid;
     grid-template-columns: repeat(8, 40px);
     grid-template-rows: repeat(3, 25px) 50px;
+    justify-content: center;
     gap: 10px;
 }
 
